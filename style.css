@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Anek Tamil', sans-serif;
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Outfit', sans-serif;
+}
+
+main {
+  display: flex;
+}
+
+aside.sidebar {
+  flex: 1.5;
+}
+
+section.burger {
+  flex: 6.5;
+}
+
+aside.cart {
+  flex: 2;
+}
+
+aside {
+  background-color: rgba(254, 124, 48, 0.7);
+  color: white;
+  text-align: center;
+
+  height: fit-content;
+  width: fit-content;
+  border-radius: 15px;
+}
+
+header {
+  text-align: center;
+
+  padding: 40px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  background-color: rgb(254, 124, 48);
+  color: white;
+  font-size: 25px;
+}
+
+aside.sidebar {
+  margin: 20px;
+  padding: 10px;
+}
+
+aside.sidebar > h2.sidebar-title {
+  margin-bottom: 20px;
+}
+
+aside.sidebar > div.sidebar-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px 10px;
+
+  margin-bottom: 10px;
+}
+
+section.burger {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px 40px;
+}
+
+article.burger-card {
+  display: flex;
+
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 15px;
+  box-shadow: 3px 2px 5px;
+
+  width: 40%;
+  padding: 30px;
+}
+
+article.burger-card:hover {
+  background-color: rgba(254, 124, 48, 0.7);
+  transition: .5s ease;
+  cursor: pointer;
+}
+
+article.burger-card>img {
+  width: 160px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+article.burger-card > .burger-contents {
+  margin-top: 20px;
+}
+
+aside.cart {
+  margin-right: 20px;
+  position: sticky;
+  top: 20px;
+}
+
+aside.cart > h2.cart-text {
+  border-bottom: 3px solid white;
+  margin: 20px;
+  padding-bottom: 50px;
+}
+
+aside.cart > div.cart-button{
+  display: flex;
+  justify-content: space-evenly;
+
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: yellow;
+  border-radius: 5px;
+  width: 130px;
+  height: 33px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+button:hover{
+  background-color: rgba(254, 124, 48, 0.7);
+  transition: .5s ease;
+  cursor: pointer;
+}
