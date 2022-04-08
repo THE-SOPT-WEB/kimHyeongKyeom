@@ -38,7 +38,6 @@ header {
   text-align: center;
 
   padding: 40px;
-  margin-top: 10px;
   margin-bottom: 20px;
 
   background-color: rgb(254, 124, 48);
@@ -81,7 +80,7 @@ article.burger-card {
   border-radius: 15px;
   box-shadow: 3px 2px 5px;
 
-  width: 40%;
+  width: 450px;
   padding: 30px;
 }
 
@@ -91,7 +90,7 @@ article.burger-card:hover {
   cursor: pointer;
 }
 
-article.burger-card>img {
+article.burger-card > img {
   width: 160px;
   margin-left: 20px;
   margin-right: 20px;
@@ -118,6 +117,8 @@ aside.cart > div.cart-button{
   justify-content: space-evenly;
 
   margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 button {
@@ -133,4 +134,30 @@ button:hover{
   background-color: rgba(254, 124, 48, 0.7);
   transition: .5s ease;
   cursor: pointer;
+}
+
+@media(max-width : 1550px) {
+
+  aside.sidebar {
+    position: absolute;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0);
+
+    top: 3%;
+    left : 20px
+  }
+
+  aside.sidebar > h2.sidebar-title {
+    display: none;
+  }
+
+  article.burger-card {
+    width: 400px;
+  }
+}
+
+@media(max-width : 650px) {
+  article.burger {
+    flex-direction: column;
+  }
 }
