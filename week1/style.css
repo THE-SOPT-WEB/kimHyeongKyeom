@@ -2,10 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Anek Tamil', sans-serif;
-  font-family: 'Inconsolata', monospace;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-family: 'Outfit', sans-serif;
 }
 
 main {
@@ -50,11 +46,11 @@ aside.sidebar {
   padding: 10px;
 }
 
-aside.sidebar > h2.sidebar-title {
+aside.sidebar > h2.sidebar__title {
   margin-bottom: 20px;
 }
 
-aside.sidebar > div.sidebar-button {
+aside.sidebar > div.sidebar__button-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,7 +68,7 @@ section.burger {
   gap: 80px 40px;
 }
 
-article.burger-card {
+article.burger__card {
   display: flex;
 
   background-color: white;
@@ -84,19 +80,19 @@ article.burger-card {
   padding: 30px;
 }
 
-article.burger-card:hover {
+article.burger__card:hover ,button:hover {
   background-color: rgba(254, 124, 48, 0.7);
   transition: .5s ease;
   cursor: pointer;
 }
 
-article.burger-card > img {
+article.burger__card > img {
   width: 160px;
   margin-left: 20px;
   margin-right: 20px;
 }
 
-article.burger-card > .burger-contents {
+article.burger__card > .burger__contents {
   margin-top: 20px;
 }
 
@@ -106,13 +102,13 @@ aside.cart {
   top: 20px;
 }
 
-aside.cart > h2.cart-text {
+aside.cart > h2.cart__text {
   border-bottom: 3px solid white;
   margin: 20px;
   padding-bottom: 50px;
 }
 
-aside.cart > div.cart-button{
+aside.cart > div.cart__button{
   display: flex;
   justify-content: space-evenly;
 
@@ -130,12 +126,6 @@ button {
   font-weight: bold;
 }
 
-button:hover{
-  background-color: rgba(254, 124, 48, 0.7);
-  transition: .5s ease;
-  cursor: pointer;
-}
-
 @media(max-width : 1550px) {
 
   aside.sidebar {
@@ -147,11 +137,11 @@ button:hover{
     left : 20px
   }
 
-  aside.sidebar > h2.sidebar-title {
+  aside.sidebar > h2.sidebar__title {
     display: none;
   }
 
-  article.burger-card {
+  article.burger__card {
     width: 400px;
   }
 }
