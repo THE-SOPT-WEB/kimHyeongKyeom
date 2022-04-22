@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>덕력 테스트</title>
+  </head>
+  <body>
+    <header>
+      <h1>덕력 TEST</h1>
+    </header>
+    <main>
+      <section class="scoreBoard">
+        <span class="scoreBoard__score">0</span>
+        <span>점</span>
+      </section>
+      <div class="imageBoard">
+        <img src="" alt="너 누구야?"/>
+      </div>
+      <div class="answer">
+        <header class="answer__title">
+          <h2>이 사람은 누구일까요?</h2>
+        </header>
+        <ul class="answer__list">
+          <li>조유리</li>
+          <li>장원영</li>
+          <li>윈터</li>
+          <li>은하</li>
+          <li>태연</li>
+        </ul>
+      </div>
+      <hr />
+      <div class="buttonList">
+        <button class="buttonList__shuffle">
+          <a href="/">다시하기</a>
+        </button>
+      </div>
+    </main>
+    <div class="modal hide">
+      <div class="modal__content">
+        <p class="modal__body"></p>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
