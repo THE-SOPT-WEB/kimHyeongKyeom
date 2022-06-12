@@ -9,8 +9,8 @@ import { MainScreen, Header, GameSection, ResultSection } from "./components/sty
 function App() {
 
   interface Files {
-    img: string;
-    name: string;
+    readonly img: string;
+    readonly name: string;
   }
 
   const gameInfo:Files[] = [
