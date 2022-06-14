@@ -23,7 +23,7 @@ function App() {
   const [round, setRound] = useState<string>("4강");
   const gameWinners = useRef<Files[]>([]);
   const [siruList, setSiruList] = useState<Files[]>(gameInfo);
-  const [matchEnd, setMatchEnd] = useState<boolean>(false);
+  const [gameEnd, setGameEnd] = useState<boolean>(false);
 
   const getSelectWinner = (pos : number) => {
     gameWinners.current.push(siruList[pos]);
@@ -37,11 +37,11 @@ function App() {
       setRound("결승");
       gameWinners.current = [];
     } else if (siruList.length === 0 && gameWinners.current.length >= 1) {
-      setMatchEnd(true);
+      setGameEnd(true);
     }
   });
 
-  if (!matchEnd) {
+  if (!gameEnd) {
     return (
       <MainScreen>
         <Header>
