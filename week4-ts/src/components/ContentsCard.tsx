@@ -3,12 +3,12 @@ import { useState, useRef } from "react";
 import axios from "axios";
 
 interface PubInfo {
-  id?: number;
-  place_url?: string;
-  place_name?: string;
-  phone?: string;
-  distance?: string;
-  adress_name?: string;
+  readonly id?: number;
+  readonly place_url?: string;
+  readonly place_name?: string;
+  readonly phone?: string;
+  readonly distance?: string;
+  readonly adress_name?: string;
 }
 
 function ContentsCard() {
@@ -35,6 +35,7 @@ function ContentsCard() {
   }
 
   async function 내근처맥주집가져오기() {
+    // 여기 타입지정 어떻게 해야해요..?
     const { x, y } = await 위치가져오기();
 
     const result = await axios.get(
