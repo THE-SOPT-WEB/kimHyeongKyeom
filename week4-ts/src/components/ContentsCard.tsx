@@ -2,10 +2,19 @@ import styled from "styled-components";
 import { useState, useRef } from "react";
 import axios from "axios";
 
+interface PubInfo {
+  id?: number;
+  place_url?: string;
+  place_name?: string;
+  phone?: string;
+  distance?: string;
+  adress_name?: string;
+}
+
 function ContentsCard() {
   const [isClicked, setIsClicked] = useState<boolean>(false);
-  const [pubList, setPubLIst] = useState([]);
-  const userInputLocation = useRef([]);
+  const [pubList, setPubLIst] = useState<PubInfo[]>([]);
+  const userInputLocation = useRef<string[]>([]);
 
   const getLocation = () => {
     if ("geolocation" in navigator) {
@@ -46,7 +55,7 @@ function ContentsCard() {
     setPubLIst(result.data.documents);
   }
 
-  async function 특정지역맥주집가져오기(location = "혜화") {
+  async function 특정지역맥주집가져오기(location : string) {
     const result = await axios.get(
       "https://dapi.kakao.com/v2/local/search/keyword",
       {
