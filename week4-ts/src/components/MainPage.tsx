@@ -38,8 +38,12 @@ function ContentsCard() {
   }
 
   async function 내근처맥주집가져오기() {
-    // 여기 x, y 타입지정 어떻게 해야해요..?
-    const { x, y } = await 위치가져오기();
+    
+    interface Coordinate {
+      x: number;
+      y: number;
+    }
+    const { x, y } : Coordinate = await 위치가져오기();
 
     const result = await axios.get(
       "https://dapi.kakao.com/v2/local/search/keyword",
@@ -90,7 +94,7 @@ function ContentsCard() {
             <input type="checkbox" onClick={() => setIsClicked(!isClicked)} />
           </SelectMode>
           <Input disabled={isClicked} />
-          <Button onClick={() => SearchHandler()}>검색하기</Button>
+          <Button onClick={SearchHandler}>검색하기</Button>
         </HeaderWrapper>
         <SearchWrapper>
           {pubList &&
