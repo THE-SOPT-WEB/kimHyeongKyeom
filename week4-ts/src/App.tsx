@@ -1,23 +1,15 @@
 import styled from "styled-components";
-import ContentsCard from "./components/ContentsCard.jsx";
+import MainPage from "./components/MainPage.js";
 import GlobalStyle from "./GlobalStyle.js";
+import Router from "./router/Router.js";
 
 function App() {
   return (
     <>
     <GlobalStyle />
-    <MainWarpper>
-        <ContentsCard />
-    </MainWarpper>
+    <Router />
     </>
   );
 }
 
 export default App;
-
-const MainWarpper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-`;
