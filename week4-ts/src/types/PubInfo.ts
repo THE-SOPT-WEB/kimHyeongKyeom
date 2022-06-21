@@ -1,8 +1,8 @@
 export interface PubInfo {
-    readonly id?: number;
-    readonly place_url?: string;
-    readonly place_name?: string;
-    readonly phone?: string;
-    readonly distance?: string;
-    readonly adress_name?: string;
+    id?: number;
+    place_url?: string;
+    place_name?: string;
+    phone?: string;
+    distance?: string;
+    adress_name?: string;
   }
